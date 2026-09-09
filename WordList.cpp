@@ -2,7 +2,7 @@
 #include "WordList.h" 
 using namespace std;
 
-// WordOccurrence definitions
+// WordOccurrence
 
 WordOccurrence::WordOccurrence(const string& word, int num) : word_(word), num_(num)
 {
@@ -28,7 +28,7 @@ int WordOccurrence::getNum() const
     return num_;
 }
 
-// WordList definitions
+// WordList
 
 WordList::WordList()
     : wordArray_(nullptr), size_(0)
@@ -112,6 +112,6 @@ void WordList::printList()
         cout << wordArray_[i].getWord()
              << ": "
              << wordArray_[i].getNum()
-             << endl;
+             << "\n";
     }
 }

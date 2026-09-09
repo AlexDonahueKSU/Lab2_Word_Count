@@ -20,12 +20,14 @@ class WordOccurrence
 class WordList
 {
 	public:
-    	// add copy constructor, destructor, overloaded assignment
+		WordList();
+   		WordList(const WordList& other);
+    	~WordList();
+
+    	WordList& operator=(const WordList& other);
     	void addWord(const string &);
     	void printList();
 	private:
-	// a dynamically allocated array of WordOccurrences
-	// may or may not be sorted
- 	WordOccurrence *wordArray_;                              
+ 		WordOccurrence *wordArray_;                              
     	int size_;
 };
