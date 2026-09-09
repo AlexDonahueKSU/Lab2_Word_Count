@@ -29,7 +29,6 @@ int WordOccurrence::getNum() const
 }
 
 // WordList
-
 WordList::WordList()
     : wordArray_(nullptr), size_(0)
 {
