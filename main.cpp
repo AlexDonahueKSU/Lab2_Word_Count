@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 2)
     {
-        cerr << "Usage: " << argv[0] << " filename\n";
+        cerr << "Requires 2 arguments.\n";
         return 1;
     }
 

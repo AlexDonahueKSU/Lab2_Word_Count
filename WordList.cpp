@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include "WordList.h" 
 using namespace std;
@@ -29,8 +30,7 @@ int WordOccurrence::getNum() const
 }
 
 // WordList
-WordList::WordList()
-    : wordArray_(nullptr), size_(0)
+WordList::WordList(): wordArray_(nullptr), size_(0)
 {
 }
 
@@ -105,6 +105,14 @@ void WordList::addWord(const string& word)
 
 void WordList::printList()
 {
+    // Using the algorithm library, allows me return all numbers in order from greatest to least occurances.
+    sort(wordArray_, wordArray_ + size_,
+        [](const WordOccurrence& first,
+           const WordOccurrence& second)
+        {
+            return first.getNum() > second.getNum();
+        });
+
     for (int i = 0; i < size_; i++)
     {
         cout << wordArray_[i].getWord() << ": " << wordArray_[i].getNum() << "\n";
