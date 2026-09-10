@@ -34,8 +34,7 @@ WordList::WordList()
 {
 }
 
-WordList::WordList(const WordList& other)
-    : wordArray_(nullptr), size_(other.size_)
+WordList::WordList(const WordList& other) : wordArray_(nullptr), size_(other.size_)
 {
     if (size_ > 0)
     {
@@ -108,9 +107,6 @@ void WordList::printList()
 {
     for (int i = 0; i < size_; i++)
     {
-        cout << wordArray_[i].getWord()
-             << ": "
-             << wordArray_[i].getNum()
-             << "\n";
+        cout << wordArray_[i].getWord() << ": " << wordArray_[i].getNum() << "\n";
     }
 }

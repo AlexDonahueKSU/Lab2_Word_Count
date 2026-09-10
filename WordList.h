@@ -6,7 +6,6 @@ class WordOccurrence
 {
 	public:
     	WordOccurrence(const string& word="", int num=0);
-        
     	bool matchWord(const string &); // returns true if word matches stored
     	void increment(); // increments number of occurrences
     	string getWord() const; 
